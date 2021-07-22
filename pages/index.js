@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Expenses from '../components/Expenses/Expenses';
+import NewExpense from '../components/NewExpenses/NewExpense';
 export default function Home() {
 	const expenses = [
 		{
@@ -39,7 +40,8 @@ export default function Home() {
 			<main className={styles.main}>
 				<h1 className={styles.title}>Budgetfy App</h1>
 
-				<section className={styles['big-width']}>
+				<section>
+					<NewExpense />
 					<Expenses expenseItems={expenses} />
 				</section>
 			</main>
