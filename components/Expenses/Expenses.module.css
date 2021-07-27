@@ -6,3 +6,15 @@
 	width: 50rem;
 	max-width: 95%;
 }
+
+@media only screen and (max-width: 50em) {
+	.expenses {
+		width: 40rem;
+	}
+}
+
+@media only screen and (max-width: 40.6em) {
+	.expenses {
+		width: 30rem;
+	}
+}

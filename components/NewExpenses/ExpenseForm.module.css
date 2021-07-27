@@ -26,3 +26,9 @@
 	align-items: flex-end;
 	text-align: right;
 }
+
+@media only screen and (max-width: 40.6em) {
+	.new-expense__control input {
+		width: 100%;
+	}
+}

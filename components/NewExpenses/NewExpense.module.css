@@ -7,7 +7,22 @@
 	border-radius: 12px;
 	text-align: center;
 	box-shadow: 0 2px 40px rgba(0, 0, 0, .1);
+}
 
+@media only screen and (max-width: 50em) {
+	.new-expense {
+		width: 40rem;
+	}
+}
+@media only screen and (max-width: 40.6em) {
+	.new-expense {
+		width: 30rem;
+	}
+}
+@media only screen and (max-width: 31.25em) {
+	.new-expense {
+		width: 20rem;
+	}
 }
 
 .new-expense button {

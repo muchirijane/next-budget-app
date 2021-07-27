@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import Expenses from '../components/Expenses/Expenses';
 import NewExpense from '../components/NewExpenses/NewExpense';
 export default function Home() {
-	const expenses = [
+	const InitialData = [
 		{
 			id: 'e1',
 			title: 'Toilet Paper',
@@ -26,6 +26,18 @@ export default function Home() {
 			date: new Date(2021, 5, 12)
 		}
 	];
+
+	const [ expenses, setExpenses ] = useState(InitialData);
+
+	const addedExpenseHandler = (expenseData) => {
+		const newExpenseData = {
+			expenseData,
+			...expenses
+		};
+		setExpenses((prevExpenses) => [ expenseData, ...prevExpenses ]);
+		console.log(newExpenseData);
+	};
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -41,21 +53,19 @@ export default function Home() {
 				<h1 className={styles.title}>Budgetfy App</h1>
 
 				<section>
-					<NewExpense />
+					<NewExpense onAddExpenseData={addedExpenseHandler} />
 					<Expenses expenseItems={expenses} />
 				</section>
 			</main>
 
 			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
+				<a href="https://github.com/muchirijane" target="_blank" rel="noopener noreferrer">
 					Powered by{' '}
-					<span className={styles.logo}>
-						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+					<span className={styles.logo} role="img">
+						{' '}
+						☕{' '}
 					</span>
+					and coded by Jane Muchiri
 				</a>
 			</footer>
 		</div>

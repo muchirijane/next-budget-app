@@ -11,6 +11,12 @@
 	justify-content: center;
 }
 
+@media only screen and (max-width: 40.6em) {
+	.expense-date {
+		width: 4.5rem;
+	}
+}
+
 .expense-date__month {
 	font-size: 1rem;
 	font-weight: bold;
