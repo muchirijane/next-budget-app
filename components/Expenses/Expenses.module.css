@@ -18,3 +18,9 @@
 		width: 30rem;
 	}
 }
+
+@media only screen and (max-width: 29.375em) {
+	.expenses {
+		width: 23rem;
+	}
+}

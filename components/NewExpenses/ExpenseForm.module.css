@@ -32,3 +32,13 @@
 		width: 100%;
 	}
 }
+@media only screen and (max-width: 29.375em) {
+	.new-expense__control {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 29.375em) {
+	.new-expense__actions {
+		margin-top: 2rem;
+	}
+}
